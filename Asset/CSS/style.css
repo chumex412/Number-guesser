@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --base-size: 1rem;
+  --type-scale: 1.2;
+  --line-height: 1.25rem;
+  --height-scale: 1.2;
+  --button: calc(var(--base-size) * var(--type-scale));
+  --paragraph: var(--button);
+  --h3:  calc(var(--paragraph) * var(--type-scale));
+  --h2: calc(var(--h3) * var(--type-scale));
+  --h1: calc(var(--h2) * var(--type-scale));
+  --btn-line-height: calc(var(--line-height) * var(--height-scale));
+  --p-line-height: calc(var(--btn-line-height) * var(--height-scale));
+  --h3-line-height: calc(var(--p-line-height) * var(--height-scale));
+  --h2-line-height: calc(var(--h3-line-height) * var(--height-scale));
+  --h1-line-height: calc(var(--h2-line-height) * var(--height-scale));
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Utilities */
+
+.container {
+  width: 100%;
+  padding: 0 1.5rem;
+  margin: auto;
+}
+
+.btn {
+  font-size: var(--button);
+  line-height: var(--btn-line-height);
+  padding: 1rem 1.5rem;
+}
+
+.btn:hover {
+  background-color: #292b2c;
+}
+
+.btn-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.h1 {
+  font-size: var(--h1);
+  line-height: var(--h1-line-height);
+}
+
+.h2 {
+  font-size: var(--h2);
+  line-height: var(--h2-line-height);
+}
+
+.h3 {
+  font-size: var(--h3);
+  line-height: var(--h3-line-height);
+}
+
+.paragraph {
+  font-size: var(--paragraph);
+  line-height: var(--p-line-height);
+}
+
+/* Main Styling */
+
+header {
+  margin: 1.5rem 0;
+}
+
+#form {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.form-group {
+  display: inline-block;
+}
+
+input[type=number] {
+  padding: 1rem 1.5rem;
+}
+
+input[type=submit] {
+  padding: 1rem 1rem
+}
+
+@media (min-width: 600px) {
+  :root {
+    --type-scale: 1.3;
+    --height-scale: 1.24;
+  }
+
+  .container {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 980px) {
+  :root {
+    --type-scale: 1.4;
+    --height-scale: 1.35;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --type-scale: 1.45;
+  }
+  .container {
+    max-width: 1100px;
+  }
+}
